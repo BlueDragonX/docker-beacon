@@ -1,4 +1,4 @@
-FROM bluedragonx/baseimage:0.1
+FROM bluedragonx/baseimage:0.2
 MAINTAINER Ryan Bourgeois <bluedragonx@gmail.com>
 
 # set up the container environment
@@ -18,5 +18,7 @@ RUN go get launchpad.net/godeb && go install launchpad.net/godeb && \
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # install beacon
-RUN go get github.com/BlueDragonX/beacon && go install github.com/BlueDragonX/beacon
+RUN echo "beacon v1.0" && \
+    go get gopkg.in/BlueDragonX/beacon.v1 && \
+    go install gopkg.in/BlueDragonX/beacon.v1
 ADD files/run /etc/service/beacon/run
