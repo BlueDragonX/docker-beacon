@@ -15,6 +15,7 @@ The following environment variables control how Beacon is run. They are mapped
 to the specified config file directives. See the [Beacon README][1] for
 additional details.
 
+- `BEACON_SERVICE_HOSTNAME` - The hostname the services are accessible at.
 - `BEACON_SERVICE_HEARBEAT` - How often to poll Docker. The `service.heartbeat` value.
 - `BEACON_SERVICE_TTL` - How long after a poll should a service expire. The `service.ttl` value.
 - `BEACON_DOCKER_URI` - The Docker URI to connect to. The `docker.uri` value.
